@@ -1,0 +1,17 @@
+<div>
+  <h2>Liste des utilisateurs</h2>
+<ul>
+
+  <li *ngFor="let u of users">
+    {{u.numero}} : {{u.nom}}
+  </li>
+</ul>
+<form >
+
+  Numéro: <input type="text" [value]="user.numero"/>
+
+  Nom: <input type="text" [value]="user.nom"/>
+
+  Nom: <input type="text" name="nom" [(ngModel)]="user.nom"/>
+  <button class="btn btn-primary" >Envoyer</button>
+ </form>
