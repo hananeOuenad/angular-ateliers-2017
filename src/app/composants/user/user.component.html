@@ -6,14 +6,7 @@
   <ul>
     <li *ngFor="let u of users">
       {{u.numero}} : {{u.nom}}
+      <a routerLink="/userDetails/{{u.numero}}">Détails</a>
       <button (click)="supprimer(u)">X</button>
     </li>
   </ul>
-  <form>
-
-    Numéro:
-    <input type="text" [value]="user.numero" /> Nom:
-    <input type="text" [value]="user.nom" /> Nom:
-    <input type="text" name="nom" [(ngModel)]="user.nom" />
-    <button class="btn btn-primary">Envoyer</button>
-  </form>

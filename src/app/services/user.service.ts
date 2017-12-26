@@ -17,11 +17,19 @@ public ajouter (user: User): Observable<User> {
   if (!user.nom) {return; }
  return this.http.post<User>(this.url, user, httpOptions);
 }
-
+// getUser (numero)
+getUser (id: number): Observable<User> {
+  return this.http.get<User>(`${this.url}/${id}`);
+}
 // Suppression
 supprimer(id: number): Observable<User> {
   return this.http.delete<User>(`${this.url}/${id}`, httpOptions);
 
+}
+
+// Modification
+public modifier(u: User): Observable<User>{
+  return this.http.put<User>( this.url, u, httpOptions);
 }
 
  public  getUsers(): Observable <User[] > {

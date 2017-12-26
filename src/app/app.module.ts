@@ -9,18 +9,21 @@ import { RouterModule } from '@angular/router' ;
 import { UserService } from './services/user.service';
 import {FormsModule } from '@angular/forms';
 import {HttpClientModule } from '@angular/common/http';
+import { UserDetailsComponent } from './composants/user-details/user-details.component';
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
-    RessourceComponent
+    RessourceComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot([{path: 'user', component: UserComponent},
-  {path: 'ressource' , component: RessourceComponent}])
+  {path: 'ressource' , component: RessourceComponent},
+{path: 'userDetails/:numero', component: UserDetailsComponent}])
 
   ],
   providers: [UserService],

@@ -1,0 +1,16 @@
+<form *ngIf="user">
+  <fieldset>
+  <div class="form-group">
+    <label for="numero">Numéro</label>
+  <input class="form-control" id="numero" type="text" [value]="user.numero" readonly /> Nom:
+</div>
+<div class="form-group">
+    <label for="nom">Nom</label>
+    <input class="form-control" id="nom" type="text" name="nom" [(ngModel)]="user.nom" />
+</div>
+
+  <button class="btn btn-primary" (click)="enregistrer()">Envoyer</button>
+
+</fieldset>
+</form>
+<button class="btn btn-primary" (click)="retour()">Retour</button>
