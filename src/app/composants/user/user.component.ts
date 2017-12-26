@@ -18,6 +18,18 @@ export class UserComponent implements OnInit {
 
   constructor(private userSerice: UserService) {
   }
+  public ajouter(nom: string ): void {
+    const u = new User();
+    u.nom = nom;
+    this.userSerice.ajouter(u)
+    .subscribe(user => this.users.push(user));
+  }
+
+  public supprimer(user: User): void {
+    this.users = this.users.filter(u => u !== user );
+    this.userSerice.supprimer(user.numero);
+  }
+
 public getUsers(): void {
 this.userSerice.getUsers().subscribe
 (users => this.users = users);
