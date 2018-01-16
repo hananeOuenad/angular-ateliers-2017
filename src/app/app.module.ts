@@ -10,12 +10,14 @@ import { UserService } from './services/user.service';
 import {FormsModule } from '@angular/forms';
 import {HttpClientModule } from '@angular/common/http';
 import { UserDetailsComponent } from './composants/user-details/user-details.component';
+import { RessourceDetailsComponent } from './composants/ressource-details/ressource-details.component';
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
     RessourceComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    RessourceDetailsComponent
   ],
   imports: [
     BrowserModule,

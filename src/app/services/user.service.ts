@@ -10,8 +10,9 @@ const httpOptions = {
 @Injectable()
 export class UserService {
 
-private url= 'https://ateliers-angular-2017.herokuapp.com/users';
-  constructor(private http: HttpClient) { }
+// private urlSpring= 'https://ateliers-angular-2017.herokuapp.com/users';
+private url= 'https://ateliers-2017-expjs-rest-api.herokuapp.com/users'  ;
+constructor(private http: HttpClient) { }
 // ajout
 public ajouter (user: User): Observable<User> {
   if (!user.nom) {return; }
