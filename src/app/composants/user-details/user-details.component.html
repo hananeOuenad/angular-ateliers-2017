@@ -9,8 +9,8 @@
     <input class="form-control" id="nom" type="text" name="nom" [(ngModel)]="user.nom" />
 </div>
 
-  <button class="btn btn-primary" (click)="enregistrer()">Envoyer</button>
-
+  <button mat-raised-button color="primary" (click)="enregistrer()">Envoyer</button>
+  <button mat-raised-button color="primary" (click)="retour()">Retour</button>
 </fieldset>
 </form>
-<button class="btn btn-primary" (click)="retour()">Retour</button>
+

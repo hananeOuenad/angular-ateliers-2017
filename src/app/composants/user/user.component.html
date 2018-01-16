@@ -1,12 +1,13 @@
 <div>
   <h2>Liste des utilisateurs</h2>
   <input #nomUser />
-  <button (click)="ajouter(nomUser.value)" class="btn btn-primary">
+  <button (click)="ajouter(nomUser.value)" mat-raised-button color="primary">
     Ajouter</button>
   <ul>
     <li *ngFor="let u of users">
       {{u.numero}} : {{u.nom}}
-      <a routerLink="/userDetails/{{u.numero}}">Détails</a>
-      <button (click)="supprimer(u)">X</button>
+      <a  mat-button color="primary" routerLink="/userDetails/{{u.numero}}">Détails</a>
+      <span><button (click)="supprimer(u)" mat-button color="warn">X</button></span>
+
     </li>
   </ul>

@@ -27,7 +27,7 @@ export class UserComponent implements OnInit {
 
   public supprimer(user: User): void {
     this.users = this.users.filter(u => u !== user );
-    this.userSerice.supprimer(user.numero);
+    this.userSerice.supprimer(user.numero).subscribe();
   }
 
 public getUsers(): void {

@@ -11,6 +11,8 @@ import {FormsModule } from '@angular/forms';
 import {HttpClientModule } from '@angular/common/http';
 import { UserDetailsComponent } from './composants/user-details/user-details.component';
 import { RessourceDetailsComponent } from './composants/ressource-details/ressource-details.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +25,8 @@ import { RessourceDetailsComponent } from './composants/ressource-details/ressou
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    MaterialModule,
     RouterModule.forRoot([{path: 'user', component: UserComponent},
   {path: 'ressource' , component: RessourceComponent},
 {path: 'userDetails/:numero', component: UserDetailsComponent}])
